@@ -24,8 +24,6 @@ BuildRequires:	python-setuptools
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools
 %endif
-Requires:	python-greenlet
-Requires:	python-msgpack
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,8 +33,6 @@ Implements support for Python plugins in nvim
 %package -n python3-neovim
 Summary:	Python client to neovim
 Group:		Libraries/Python
-Requires:	python3-greenlet
-Requires:	python3-msgpack
 
 %description -n python3-neovim
 Implements support for Python plugins in nvim
