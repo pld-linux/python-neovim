@@ -7,12 +7,12 @@
 %define		egg_name	neovim
 Summary:	Python client to neovim
 Name:		python-%{module}
-Version:	0.1.9
-Release:	2
+Version:	0.1.13
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/neovim/python-client/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	a79bca20b8e4876e059a4190e68e881b
+# Source0-md5:	f98f7cd11f2831f4f73bb88971b34701
 URL:		https://github.com/neovim/python-client
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
