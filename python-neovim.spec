@@ -4,15 +4,15 @@
 %bcond_without	python3 # CPython 3.x module
 
 %define		module		neovim
-%define		egg_name	neovim
+%define		egg_name	pynvim
 Summary:	Python client to neovim
 Name:		python-%{module}
-Version:	0.2.6
-Release:	3
+Version:	0.4.3
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/neovim/python-client/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	25544ac15b85755e5d444439d82e73fe
+# Source0-md5:	b7370a5b3d2177d2b97ca48695ba1ae3
 URL:		https://github.com/neovim/python-client
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -38,7 +38,7 @@ Group:		Libraries/Python
 Implements support for Python plugins in nvim
 
 %prep
-%setup -q -n python-client-%{version}
+%setup -q -n pynvim-%{version}
 
 %build
 %if %{with python2}
@@ -68,6 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/pynvim
 %{py_sitescriptdir}/%{egg_name}-%{version}-py*.egg-info
 %endif
 
@@ -76,5 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %{py3_sitescriptdir}/%{module}
+%{py3_sitescriptdir}/pynvim
 %{py3_sitescriptdir}/%{egg_name}-%{version}-py*.egg-info
 %endif
