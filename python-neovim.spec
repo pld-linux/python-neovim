@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%if %{with python3}
+%if %{with python2}
 %files
 %defattr(644,root,root,755)
 %doc README.md
