@@ -8,7 +8,7 @@
 Summary:	Python client to neovim
 Name:		python-%{module}
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/neovim/python-client/archive/%{version}/%{name}-%{version}.tar.gz
